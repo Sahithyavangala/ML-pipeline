@@ -1,0 +1,27 @@
+python -m venv .venv
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+.\.venv\Scripts\activate
+
+pip install --upgrade pip
+pip install -r requirements.txt
+
+python src/data_generator.py
+
+python src/data_validation.py
+
+python src/preprocessing.py
+
+python src/feature_engineering.py
+pip show seaborn
+pip install faker
+
+
+
+
+
+python src/train.py
+python src/evaluate.py
+pip install flask
+python src/api_app.py
+
+
